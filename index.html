@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fffbff">
+  <meta name="description" content="A browser-based autism screening for adults. It cannot diagnose autism.">
+  <title>Aspect — Autism Screening</title>
+  <link rel="icon" type="image/svg+xml" href="assets/aspect.svg">
+  <link rel="stylesheet" href="vendor/beercss/beer.min.css">
+</head>
+<body class="light">
+  <header class="fixed responsive">
+    <div class="responsive row" role="navigation" aria-label="Main navigation" data-i18n-aria="aria.navigation">
+      <button class="border round" id="homeButton" type="button" aria-label="Aspect home"><strong>Aspect</strong></button>
+      <span class="max"></span>
+      <button class="border round" id="historyButton" type="button" aria-label="Past results" data-i18n-aria="actions.history"><i aria-hidden="true">history</i><span class="m" data-i18n="actions.history">Past results</span></button>
+      <nav class="group connected" role="group" aria-label="Language" data-i18n-aria="aria.language"><button class="chip" type="button" data-lang="en" aria-pressed="true">EN</button><button class="chip" type="button" data-lang="de" aria-pressed="false">DE</button></nav>
+    </div>
+    <progress class="small" id="progressBar" value="0" max="100" aria-label="Assessment progress" data-i18n-aria="aria.progress" hidden></progress>
+  </header>
+  <main id="app" class="responsive">
+    <section class="screen vertical-padding" data-screen="intro">
+      <div class="grid large-space">
+        <div class="s12 m12 l7">
+          <h1 class="small" data-i18n="intro.title">Adult autism screening</h1>
+          <p class="large-text" data-i18n="intro.copy">Answer 100 questions about social communication, sensory experience, routines, development and everyday impact. Aspect summarizes your responses by area; it cannot diagnose autism or calculate a probability.</p>
+          <div class="row wrap top-margin">
+            <button class="primary round" id="startButton" type="button"><span id="startLabel" data-i18n="actions.start">Start screening</span><i aria-hidden="true">arrow_forward</i></button>
+            <button class="border round" id="startOverButton" type="button" hidden><i aria-hidden="true">restart_alt</i><span data-i18n="actions.startOver">Start over</span></button>
+          </div>
+          <p class="small-text secondary-text top-margin" data-i18n="intro.facts">About 20–30 minutes · Answers stay in this browser.</p>
+          <p class="small-text secondary-text" data-i18n="home.disclaimer">For adults aged 18+.</p>
+        </div>
+        <article class="s12 m12 l5" aria-labelledby="scopeTitle">
+          <h2 class="h5" id="scopeTitle" data-i18n="home.cardTitle">What the screening covers</h2>
+          <p data-i18n="home.cardCopy">Questions cover the areas below. Other possible explanations are considered separately.</p>
+          <ul class="horizontal-padding" aria-label="Assessment areas" data-i18n-aria="aria.assessmentAreas">
+            <li data-i18n="home.areaSocial">Social communication and relationships</li>
+            <li data-i18n="home.areaSensory">Sensory experiences, routines and change</li>
+            <li data-i18n="home.areaDevelopment">Development from childhood onward</li>
+            <li data-i18n="home.areaImpact">Social masking and everyday impact</li>
+          </ul>
+          <p class="small-text secondary-text" data-i18n="home.modelNote">The scoring model is provisional and has not been clinically validated.</p>
+        </article>
+      </div>
+      <section class="top-margin">
+        <h2 class="h6" id="privacyTitle" data-i18n="home.privacyTitle">Privacy</h2>
+        <p data-i18n="home.privacyCopy">Your answers stay in this browser on this device. Aspect has no account, analytics, or answer uploads.</p>
+        <a href="#method" class="button border round" data-open-method data-i18n="footer.method">What Aspect can and cannot tell you</a>
+      </section>
+    </section>
+
+    <section class="screen vertical-padding" data-screen="consent" hidden>
+      <div class="grid"><div class="s12 m10 l8 auto-margin">
+        <button class="border round" id="consentBack" type="button"><i aria-hidden="true">arrow_back</i><span data-i18n="actions.backHome">Back</span></button>
+        <p class="primary-text small-text top-margin" data-i18n="consent.kicker">Before you begin</p><h1 class="small" data-i18n="consent.title">A few things to know.</h1>
+        <p class="large-text" data-i18n="consent.intro">Aspect is a screening tool for autistic traits in adults. It may identify patterns worth discussing with a professional, but it cannot diagnose autism.</p>
+        <ol class="top-margin">
+          <li data-i18n="consent.point1">This version is intended for adults aged 18 and over who can read English or German independently.</li>
+          <li data-i18n="consent.point2">Think about your typical experience over the last 12 months, not your best or worst day, and not what seems “most autistic.”</li>
+          <li data-i18n="consent.point3">For childhood questions, choose “I don’t remember” whenever you are unsure. You do not need to guess.</li>
+          <li data-i18n="consent.point4">Your answers are saved only in this browser on this device. You may leave items unanswered.</li>
+        </ol>
+        <label class="checkbox"><input id="adultConfirm" type="checkbox"><span data-i18n="consent.adultConfirm">I am 18 or older.</span></label>
+        <button class="primary round top-margin" id="beginButton" type="button" disabled><span data-i18n="actions.begin">Begin screening</span><i aria-hidden="true">arrow_forward</i></button>
+      </div></div>
+    </section>
+
+    <section class="screen vertical-padding" data-screen="quiz" hidden>
+      <div class="grid"><div class="s12 m10 l8 auto-margin">
+        <div class="row wrap tiny-space"><div class="max"><span class="primary-text small-text" id="questionSection"></span><p class="small-text secondary-text" id="questionCount"></p></div><span class="chip" id="saveState"></span></div>
+        <div class="row top-margin"><span data-i18n="quiz.progress">Overall progress</span><span class="max"></span><span id="progressText"></span></div>
+        <progress id="inlineProgress" class="medium" value="0" max="100" aria-label="Assessment progress" data-i18n-aria="aria.progress"></progress>
+        <h1 class="h5" id="questionText" tabindex="-1" aria-live="polite" aria-atomic="true"></h1>
+        <p class="secondary-text" id="questionHint"></p>
+        <div class="row wrap tiny-space top-margin">
+          <button class="border round large" id="backButton" type="button"><i aria-hidden="true">arrow_back</i><span data-i18n="actions.back">Back</span></button>
+          <span class="max"></span>
+          <button class="border round large" id="preferButton" type="button" data-i18n="actions.prefer">Prefer not to answer</button>
+        </div>
+        <div id="answerArea" class="grid small-space"></div>
+        <p class="right-align small-text secondary-text" data-i18n="quiz.keys">You can use keys 1–5 to choose an answer.</p>
+      </div></div>
+    </section>
+
+    <section class="screen vertical-padding" data-screen="results" hidden>
+      <div>
+        <div class="row"><div><span class="primary-text small-text" data-i18n="results.eyebrow">Your screening profile</span><p class="small-text secondary-text" id="resultDate"></p></div></div>
+        <h1 class="small" id="resultTitle"></h1><p class="primary-text" data-i18n="results.notDiagnosis">This is not a diagnosis.</p>
+        <p class="large-text" id="resultSummary"></p>
+        <section class="top-margin"><div><span class="primary-text small-text" data-i18n="results.domainEyebrow">Your responses, by area</span><h2 class="h5" data-i18n="results.domainTitle">Main pattern</h2></div><p class="small-text secondary-text" data-i18n="results.scoreNote">Scores describe your responses in this assessment. They are not probabilities.</p><table><tbody id="domainList"></tbody></table></section>
+        <section class="top-margin"><span class="primary-text small-text" data-i18n="results.contextEyebrow">In parallel</span><h2 class="h5" data-i18n="results.contextTitle">Other patterns worth considering</h2><ul id="contextList" class="horizontal-padding"></ul></section>
+        <div class="grid medium-space top-margin"><section class="s12 m6"><span class="primary-text small-text" data-i18n="results.qualityLabel">Response quality</span><h3 class="h6" id="qualityTitle"></h3><p id="qualityCopy"></p></section><section class="s12 m6"><span class="primary-text small-text" data-i18n="results.childhoodLabel">Childhood information</span><h3 class="h6" id="childhoodTitle"></h3><p id="childhoodCopy"></p></section></div>
+        <div class="grid medium-space top-margin"><section class="s12 m6"><h3 class="h6" data-i18n="results.standsOut">What stands out</h3><p id="standsOutCopy"></p></section><section class="s12 m6"><h3 class="h6" data-i18n="results.complicates">What may complicate interpretation</h3><p id="complicatesCopy"></p></section><section class="s12 m6"><h3 class="h6" data-i18n="results.cannotTell">What this test cannot tell you</h3><p data-i18n="results.cannotTellCopy">A website cannot establish a diagnosis, reconstruct your full developmental history, or account for everything shaping your experience.</p></section><section class="s12 m6"><h3 class="h6" data-i18n="results.nextStep">A possible next step</h3><p id="nextStepCopy"></p></section></div>
+        <p class="small-text secondary-text top-margin" data-i18n="results.modelNote">The scoring model is provisional and has not been independently clinically validated. Scores are not probabilities.</p>
+      </div>
+      <div class="row wrap center-align top-margin"><button class="primary round" id="savePngButton" type="button" data-i18n="actions.savePng">Save PNG</button><button class="border round" id="sharePngButton" type="button" data-i18n="actions.sharePng">Share PNG</button><button class="border round" id="retakeButton" type="button" data-i18n="actions.retake">Start again</button></div>
+    </section>
+
+    <section class="screen vertical-padding" id="method" data-screen="method" hidden>
+      <div class="grid"><div class="s12 m10 l8 auto-margin"><button class="border round" id="methodBack" type="button"><i aria-hidden="true">arrow_back</i><span data-i18n="actions.backHome">Back</span></button><p class="primary-text small-text top-margin" data-i18n="method.kicker">A clear explanation</p><h1 class="small" data-i18n="method.title">What Aspect can and cannot do</h1><p class="large-text" data-i18n="method.intro">Aspect organizes your answers into a provisional screening summary. It cannot tell you whether you are autistic.</p><div id="methodContent" class="grid large-space top-margin"></div></div></div>
+    </section>
+  </main>
+  <footer class="responsive horizontal-padding top-margin">
+    <div class="grid">
+      <span class="s12 small-text secondary-text" data-i18n="footer.privacy">For adults 18+ · Not a diagnosis</span>
+      <button class="s12 m6 border round error-text" id="deleteData" type="button" data-i18n="footer.delete">Delete my local data</button>
+      <a class="button s12 m6 border round" href="#method" data-open-method data-i18n="footer.method">What Aspect can and cannot tell you</a>
+    </div>
+  </footer>
+  <dialog id="historyDrawer" class="left large" aria-labelledby="historyTitle">
+    <header class="row"><div><span class="primary-text small-text" data-i18n="history.eyebrow">Your device</span><h2 class="h5" id="historyTitle" data-i18n="history.title">Past results</h2></div><span class="max"></span><button class="border round" id="historyCloseButton" type="button" data-i18n="actions.close">Close</button></header>
+    <ul id="historyList" class="list"></ul>
+  </dialog>
+  <dialog id="confirmDialog" class="large-padding" aria-labelledby="confirmTitle">
+    <h2 class="h5" id="confirmTitle"></h2>
+    <div id="confirmCopy"></div>
+    <div class="row wrap right-align"><button class="border round" id="confirmCancel" type="button"></button><button class="primary round" id="confirmAccept" type="button"></button></div>
+  </dialog>
+  <div class="snackbar bottom" id="toast" role="status" aria-live="polite"></div>
+  <canvas id="exportCanvas" width="1200" height="1500" hidden></canvas>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

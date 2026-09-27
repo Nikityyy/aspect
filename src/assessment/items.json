@@ -1,0 +1,702 @@
+[
+  {
+    "id": "sc01",
+    "domain": "socialReciprocity",
+    "type": "frequency",
+    "reverse": false,
+    "section": "social"
+  },
+  {
+    "id": "sc13",
+    "domain": "relationships",
+    "type": "frequency",
+    "reverse": false,
+    "section": "social"
+  },
+  {
+    "id": "sc02",
+    "domain": "socialReciprocity",
+    "type": "frequency",
+    "reverse": true,
+    "section": "social"
+  },
+  {
+    "id": "sc14",
+    "domain": "relationships",
+    "type": "frequency",
+    "reverse": false,
+    "section": "social"
+  },
+  {
+    "id": "sc03",
+    "domain": "socialReciprocity",
+    "type": "frequency",
+    "reverse": true,
+    "section": "social"
+  },
+  {
+    "id": "sc15",
+    "domain": "relationships",
+    "type": "frequency",
+    "reverse": true,
+    "section": "social"
+  },
+  {
+    "id": "sc04",
+    "domain": "socialReciprocity",
+    "type": "frequency",
+    "reverse": false,
+    "section": "social"
+  },
+  {
+    "id": "sc16",
+    "domain": "relationships",
+    "type": "frequency",
+    "reverse": false,
+    "section": "social"
+  },
+  {
+    "id": "sc05",
+    "domain": "socialReciprocity",
+    "type": "frequency",
+    "reverse": false,
+    "section": "social"
+  },
+  {
+    "id": "sc17",
+    "domain": "relationships",
+    "type": "frequency",
+    "reverse": false,
+    "section": "social"
+  },
+  {
+    "id": "sc06",
+    "domain": "socialReciprocity",
+    "type": "frequency",
+    "reverse": true,
+    "section": "social"
+  },
+  {
+    "id": "sc18",
+    "domain": "relationships",
+    "type": "frequency",
+    "reverse": true,
+    "section": "social"
+  },
+  {
+    "id": "sc07",
+    "domain": "nonverbalCommunication",
+    "type": "frequency",
+    "reverse": false,
+    "section": "communication"
+  },
+  {
+    "id": "sc08",
+    "domain": "nonverbalCommunication",
+    "type": "frequency",
+    "reverse": true,
+    "section": "communication"
+  },
+  {
+    "id": "sc09",
+    "domain": "nonverbalCommunication",
+    "type": "frequency",
+    "reverse": false,
+    "section": "communication"
+  },
+  {
+    "id": "sc10",
+    "domain": "nonverbalCommunication",
+    "type": "frequency",
+    "reverse": false,
+    "section": "communication"
+  },
+  {
+    "id": "sc11",
+    "domain": "nonverbalCommunication",
+    "type": "frequency",
+    "reverse": true,
+    "section": "communication"
+  },
+  {
+    "id": "sc12",
+    "domain": "nonverbalCommunication",
+    "type": "frequency",
+    "reverse": false,
+    "section": "communication"
+  },
+  {
+    "id": "rrb01",
+    "domain": "repetitiveBehaviour",
+    "type": "frequency",
+    "reverse": false,
+    "section": "patterns"
+  },
+  {
+    "id": "same01",
+    "domain": "sameness",
+    "type": "frequency",
+    "reverse": false,
+    "section": "patterns"
+  },
+  {
+    "id": "int01",
+    "domain": "focusedInterests",
+    "type": "frequency",
+    "reverse": false,
+    "section": "patterns"
+  },
+  {
+    "id": "rrb02",
+    "domain": "repetitiveBehaviour",
+    "type": "frequency",
+    "reverse": false,
+    "section": "patterns"
+  },
+  {
+    "id": "same02",
+    "domain": "sameness",
+    "type": "frequency",
+    "reverse": false,
+    "section": "patterns"
+  },
+  {
+    "id": "int02",
+    "domain": "focusedInterests",
+    "type": "frequency",
+    "reverse": false,
+    "section": "patterns"
+  },
+  {
+    "id": "rrb03",
+    "domain": "repetitiveBehaviour",
+    "type": "frequency",
+    "reverse": false,
+    "section": "patterns"
+  },
+  {
+    "id": "same03",
+    "domain": "sameness",
+    "type": "frequency",
+    "reverse": true,
+    "section": "patterns"
+  },
+  {
+    "id": "int03",
+    "domain": "focusedInterests",
+    "type": "frequency",
+    "reverse": false,
+    "section": "patterns"
+  },
+  {
+    "id": "rrb04",
+    "domain": "repetitiveBehaviour",
+    "type": "frequency",
+    "reverse": false,
+    "section": "patterns"
+  },
+  {
+    "id": "same04",
+    "domain": "sameness",
+    "type": "frequency",
+    "reverse": false,
+    "section": "patterns"
+  },
+  {
+    "id": "int04",
+    "domain": "focusedInterests",
+    "type": "frequency",
+    "reverse": true,
+    "section": "patterns"
+  },
+  {
+    "id": "same05",
+    "domain": "sameness",
+    "type": "frequency",
+    "reverse": false,
+    "section": "patterns"
+  },
+  {
+    "id": "int05",
+    "domain": "focusedInterests",
+    "type": "frequency",
+    "reverse": false,
+    "section": "patterns"
+  },
+  {
+    "id": "sen01",
+    "domain": "sensory",
+    "type": "frequency",
+    "reverse": false,
+    "section": "sensory"
+  },
+  {
+    "id": "sen02",
+    "domain": "sensory",
+    "type": "frequency",
+    "reverse": false,
+    "section": "sensory"
+  },
+  {
+    "id": "sen03",
+    "domain": "sensory",
+    "type": "frequency",
+    "reverse": false,
+    "section": "sensory"
+  },
+  {
+    "id": "sen04",
+    "domain": "sensory",
+    "type": "frequency",
+    "reverse": false,
+    "section": "sensory"
+  },
+  {
+    "id": "sen05",
+    "domain": "sensory",
+    "type": "frequency",
+    "reverse": false,
+    "section": "sensory"
+  },
+  {
+    "id": "sen06",
+    "domain": "sensory",
+    "type": "frequency",
+    "reverse": false,
+    "section": "sensory"
+  },
+  {
+    "id": "sen07",
+    "domain": "sensory",
+    "type": "frequency",
+    "reverse": false,
+    "section": "sensory"
+  },
+  {
+    "id": "sen08",
+    "domain": "sensory",
+    "type": "frequency",
+    "reverse": true,
+    "section": "sensory"
+  },
+  {
+    "id": "sen09",
+    "domain": "sensory",
+    "type": "frequency",
+    "reverse": false,
+    "section": "sensory"
+  },
+  {
+    "id": "sen10",
+    "domain": "sensory",
+    "type": "frequency",
+    "reverse": false,
+    "section": "sensory"
+  },
+  {
+    "id": "dev01",
+    "domain": "development",
+    "type": "development",
+    "reverse": false,
+    "section": "development"
+  },
+  {
+    "id": "dev02",
+    "domain": "development",
+    "type": "development",
+    "reverse": false,
+    "section": "development"
+  },
+  {
+    "id": "dev03",
+    "domain": "development",
+    "type": "development",
+    "reverse": false,
+    "section": "development"
+  },
+  {
+    "id": "dev04",
+    "domain": "development",
+    "type": "development",
+    "reverse": false,
+    "section": "development"
+  },
+  {
+    "id": "dev05",
+    "domain": "development",
+    "type": "development",
+    "reverse": false,
+    "section": "development"
+  },
+  {
+    "id": "dev06",
+    "domain": "development",
+    "type": "development",
+    "reverse": false,
+    "section": "development"
+  },
+  {
+    "id": "dev07",
+    "domain": "development",
+    "type": "development",
+    "reverse": false,
+    "section": "development"
+  },
+  {
+    "id": "dev08",
+    "domain": "development",
+    "type": "development",
+    "reverse": false,
+    "section": "development"
+  },
+  {
+    "id": "dev09",
+    "domain": "development",
+    "type": "development",
+    "reverse": false,
+    "section": "development"
+  },
+  {
+    "id": "dev10",
+    "domain": "development",
+    "type": "development",
+    "reverse": false,
+    "section": "development"
+  },
+  {
+    "id": "dev11",
+    "domain": "development",
+    "type": "development",
+    "reverse": false,
+    "section": "development"
+  },
+  {
+    "id": "dev12",
+    "domain": "development",
+    "type": "development",
+    "reverse": false,
+    "section": "development"
+  },
+  {
+    "id": "mask01",
+    "domain": "masking",
+    "type": "frequency",
+    "reverse": false,
+    "section": "adaptation"
+  },
+  {
+    "id": "mask02",
+    "domain": "masking",
+    "type": "frequency",
+    "reverse": false,
+    "section": "adaptation"
+  },
+  {
+    "id": "mask03",
+    "domain": "masking",
+    "type": "frequency",
+    "reverse": false,
+    "section": "adaptation"
+  },
+  {
+    "id": "mask04",
+    "domain": "masking",
+    "type": "frequency",
+    "reverse": false,
+    "section": "adaptation"
+  },
+  {
+    "id": "mask05",
+    "domain": "masking",
+    "type": "frequency",
+    "reverse": false,
+    "section": "adaptation"
+  },
+  {
+    "id": "mask06",
+    "domain": "masking",
+    "type": "frequency",
+    "reverse": false,
+    "section": "adaptation"
+  },
+  {
+    "id": "mask07",
+    "domain": "masking",
+    "type": "frequency",
+    "reverse": false,
+    "section": "adaptation"
+  },
+  {
+    "id": "mask08",
+    "domain": "masking",
+    "type": "frequency",
+    "reverse": false,
+    "section": "adaptation"
+  },
+  {
+    "id": "mask09",
+    "domain": "masking",
+    "type": "frequency",
+    "reverse": false,
+    "section": "adaptation"
+  },
+  {
+    "id": "mask10",
+    "domain": "masking",
+    "type": "frequency",
+    "reverse": false,
+    "section": "adaptation"
+  },
+  {
+    "id": "impact01",
+    "domain": "functionalImpact",
+    "type": "impact",
+    "reverse": false,
+    "section": "impact"
+  },
+  {
+    "id": "impact02",
+    "domain": "functionalImpact",
+    "type": "impact",
+    "reverse": false,
+    "section": "impact"
+  },
+  {
+    "id": "impact03",
+    "domain": "functionalImpact",
+    "type": "impact",
+    "reverse": false,
+    "section": "impact"
+  },
+  {
+    "id": "impact04",
+    "domain": "functionalImpact",
+    "type": "impact",
+    "reverse": false,
+    "section": "impact"
+  },
+  {
+    "id": "impact05",
+    "domain": "functionalImpact",
+    "type": "impact",
+    "reverse": false,
+    "section": "impact"
+  },
+  {
+    "id": "impact06",
+    "domain": "functionalImpact",
+    "type": "impact",
+    "reverse": false,
+    "section": "impact"
+  },
+  {
+    "id": "impact07",
+    "domain": "functionalImpact",
+    "type": "impact",
+    "reverse": false,
+    "section": "impact"
+  },
+  {
+    "id": "impact08",
+    "domain": "functionalImpact",
+    "type": "impact",
+    "reverse": false,
+    "section": "impact"
+  },
+  {
+    "id": "adhd01",
+    "domain": "adhd",
+    "type": "frequency",
+    "reverse": false,
+    "section": "other"
+  },
+  {
+    "id": "anx01",
+    "domain": "socialAnxiety",
+    "type": "frequency",
+    "reverse": false,
+    "section": "other"
+  },
+  {
+    "id": "ocd01",
+    "domain": "ocd",
+    "type": "frequency",
+    "reverse": false,
+    "section": "other"
+  },
+  {
+    "id": "dep01",
+    "domain": "depression",
+    "type": "frequency",
+    "reverse": false,
+    "section": "other"
+  },
+  {
+    "id": "adhd02",
+    "domain": "adhd",
+    "type": "frequency",
+    "reverse": false,
+    "section": "other"
+  },
+  {
+    "id": "anx02",
+    "domain": "socialAnxiety",
+    "type": "frequency",
+    "reverse": false,
+    "section": "other"
+  },
+  {
+    "id": "ocd02",
+    "domain": "ocd",
+    "type": "frequency",
+    "reverse": false,
+    "section": "other"
+  },
+  {
+    "id": "dep02",
+    "domain": "depression",
+    "type": "frequency",
+    "reverse": false,
+    "section": "other"
+  },
+  {
+    "id": "adhd03",
+    "domain": "adhd",
+    "type": "frequency",
+    "reverse": false,
+    "section": "other"
+  },
+  {
+    "id": "anx03",
+    "domain": "socialAnxiety",
+    "type": "frequency",
+    "reverse": false,
+    "section": "other"
+  },
+  {
+    "id": "ocd03",
+    "domain": "ocd",
+    "type": "frequency",
+    "reverse": false,
+    "section": "other"
+  },
+  {
+    "id": "dep03",
+    "domain": "depression",
+    "type": "frequency",
+    "reverse": false,
+    "section": "other"
+  },
+  {
+    "id": "adhd04",
+    "domain": "adhd",
+    "type": "frequency",
+    "reverse": false,
+    "section": "other"
+  },
+  {
+    "id": "anx04",
+    "domain": "socialAnxiety",
+    "type": "frequency",
+    "reverse": false,
+    "section": "other"
+  },
+  {
+    "id": "ocd04",
+    "domain": "ocd",
+    "type": "frequency",
+    "reverse": false,
+    "section": "other"
+  },
+  {
+    "id": "dep04",
+    "domain": "depression",
+    "type": "frequency",
+    "reverse": false,
+    "section": "other"
+  },
+  {
+    "id": "adhd05",
+    "domain": "adhd",
+    "type": "frequency",
+    "reverse": false,
+    "section": "other"
+  },
+  {
+    "id": "anx05",
+    "domain": "socialAnxiety",
+    "type": "frequency",
+    "reverse": false,
+    "section": "other"
+  },
+  {
+    "id": "ocd05",
+    "domain": "ocd",
+    "type": "frequency",
+    "reverse": false,
+    "section": "other"
+  },
+  {
+    "id": "dep05",
+    "domain": "depression",
+    "type": "frequency",
+    "reverse": false,
+    "section": "other"
+  },
+  {
+    "id": "adhd06",
+    "domain": "adhd",
+    "type": "frequency",
+    "reverse": false,
+    "section": "other"
+  },
+  {
+    "id": "anx06",
+    "domain": "socialAnxiety",
+    "type": "frequency",
+    "reverse": false,
+    "section": "other"
+  },
+  {
+    "id": "quality01",
+    "domain": "quality",
+    "type": "frequency",
+    "reverse": false,
+    "section": "checks"
+  },
+  {
+    "id": "quality02",
+    "domain": "quality",
+    "type": "frequency",
+    "reverse": false,
+    "section": "checks"
+  },
+  {
+    "id": "quality03",
+    "domain": "quality",
+    "type": "frequency",
+    "reverse": false,
+    "section": "checks"
+  },
+  {
+    "id": "quality04",
+    "domain": "quality",
+    "type": "frequency",
+    "reverse": false,
+    "section": "checks"
+  },
+  {
+    "id": "quality05",
+    "domain": "quality",
+    "type": "frequency",
+    "reverse": false,
+    "section": "checks"
+  },
+  {
+    "id": "quality06",
+    "domain": "quality",
+    "type": "frequency",
+    "reverse": false,
+    "section": "checks"
+  }
+]
